@@ -1,0 +1,149 @@
+body 
+{
+  background-color: white;
+}
+
+.img1
+{
+  position:absolute;
+  left:0;
+  top:20;
+  padding: 1px;
+}
+
+.img2
+{
+  position:absolute;
+  right:0;
+  top:20;
+  padding: 1px;
+}
+
+nav 
+{
+  background-color: hsla(0, 0%, 0%, 0.8);
+  padding: 2px;
+  text-align: center;
+}
+nav ul 
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li 
+{
+  display: inline-block;
+}
+
+nav ul li a 
+{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 25px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+nav ul li a:hover 
+{
+  background-color: hsla(0, 0%, 0%, 1);
+}
+
+p
+{
+	font-family: "Sans-serif", Verdana;
+	font-size: 17px;
+	color: white;
+}
+
+h1 
+{
+	font-family: "Sans-serif", Verdana;
+	font-size: 30px;
+}
+
+h2
+{
+	font-family: "Sans-serif", Verdana;
+	font-size: 25px;
+}
+
+h3
+{
+	font-family: "Sans-serif", Verdana;
+	font-size: 45px;
+	padding: 5px;
+}
+
+button  
+{
+	background-color: hsla(0, 0%, 0%, 0.8);
+	font-family: "Sans-serif", Verdana;
+	font-weight: bold;
+	color: white;
+	padding: 25px;
+}
+
+.button:hover
+{
+	background-color: hsla(0, 0%, 0%, 1);
+	cursor: crosshair;
+}
+td 
+{
+	font-family: "Sans-serif", Verdana;
+	text-align: center;
+}
+
+.tablehead
+{
+	font-size: 30px;
+	padding: 20px;
+	font-weight: bold;
+}
+
+.tablebody
+{
+	font-size: 20px;
+}
+
+div
+{
+  width:1350px;
+  margin:auto;
+  background-color: hsla(0, 0%, 0%, 1);
+  padding: 40px;
+}
+
+.div1
+{
+  width:1200px;
+  margin:auto;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  padding: 40px;
+}
+
+audio
+{
+  padding: 40px;
+}
+
+input
+{
+	width: 450px; 
+	height: 70px;
+}
+footer
+{
+	text-align: center;
+	background-color: hsla(0, 0%, 0%, 0.8);
+	padding: 40px;
+}
+
+textarea {
+  resize: none;
+}
