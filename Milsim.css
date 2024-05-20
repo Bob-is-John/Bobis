@@ -96,6 +96,13 @@ button
 	background-color: hsla(0, 0%, 0%, 1);
 	cursor: crosshair;
 }
+
+.ATCButton {
+    background-color: #756d54;
+    cursor: pointer;
+}
+
+
 td 
 {
 	font-family: "Sans-serif", Verdana;
