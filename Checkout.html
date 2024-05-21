@@ -24,11 +24,30 @@
 			<li><a href="index.html">HOME</a></li>
 			<li><a href="Milsim-Products.html">PRODUCTS</a></li>
 			<li><a href="Milsim-About-Us.html">ABOUT US</a></li>
-			<li><a href="">CHECKOUT</a></li>
+			<li><a href="">CONTACT US</a></li>
 		</ul>
 	</nav>
 	<center>
-	<h1> YOUR CART </h1>	
-  </center>
+	<h1> YOUR CART </h1>
+		<br>
+		<br>
+	<h1>Checkout</h1>
+  <div id="cartDetails"></div>
+
+<script>
+    // Retrieve product details from localStorage
+    const product = JSON.parse(localStorage.getItem('cartProduct'));
+
+    if (product) {
+      const cartDetailsDiv = document.getElementById('cartDetails');
+      cartDetailsDiv.innerHTML = `
+        <img src="${product.imageSrc}" width="490px" height="490px">
+        <p>Price: ${product.price}</p>
+      `;
+    } else {
+      alert('No products in cart.');
+    }
+  </script>
 </body>
+</html>
     
