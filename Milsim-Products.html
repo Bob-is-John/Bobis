@@ -67,17 +67,24 @@
 	<tbody>
 		<tr>
 		<td class = "tablebody">$299.99</td>
-		<td class = "tablebody"><button onclick="BFunction()" class="ATCButton">ADD TO CART</button></td>
-		<script>
-function BFunction() {
-  alert("Added to Cart!");2
-}
-</script>
-<tr>
+		<td class = "tablebody"><button onclick="BFunction()" class="ATCButton">ADD TO CART</button>
+		</td>
+	<tr>
 </tbody>
 </table>
-
-
+  <script>
+    function addToCart() {
+      // Store product details in localStorage
+      const product = {
+        imageSrc: 'https://agilitegear.com/cdn/shop/products/Untitleddesign_7.jpg?v=1706689073&width=1000',
+        price: '$299.99'
+      };
+      localStorage.setItem('cartProduct', JSON.stringify(product));
+      alert('Added to Cart!');
+      // Redirect to Checkout.html
+      window.location.href = 'Checkout.html';
+    }
+  </script>
 <br>
 <br>
 <hr>
