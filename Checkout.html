@@ -54,7 +54,7 @@
   
   <script>
     // Retrieve product details from localStorage
-    let product = JSON.parse(localStorage.getItem('cartProduct'));
+    let product1 = JSON.parse(localStorage.getItem('cartProduct'));
 
     function updateCartDetails() {
       if (product) {
@@ -124,11 +124,11 @@
   
   <script>
     // Retrieve product details from localStorage
-    let product = JSON.parse(localStorage.getItem('cartProduct'));
+    let product = JSON.parse(localStorage.getItem('cartProduct1'));
 
     function updateCartDetails() {
       if (product) {
-        const cartDetailsDiv = document.getElementById('cartDetails');
+        const cartDetailsDiv = document.getElementById('cartDetails1');
         cartDetailsDiv.innerHTML = `
           <div class="product-info">
             <img src="${product.imageSrc}" width="490px" height="490px">
@@ -142,7 +142,7 @@
         `;
         updateTotalPrice();
       } else {
-        document.getElementById('cartDetails').innerHTML = '<p>No products in cart.</p>';
+        document.getElementById('cartDetails1').innerHTML = '<p>No products in cart.</p>';
         document.getElementById('totalPrice').innerHTML = '';
       }
     }
