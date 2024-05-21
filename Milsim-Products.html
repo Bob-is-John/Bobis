@@ -56,23 +56,24 @@
 	<tr>
 	</tbody>
 		
-<table>
-	<thead>
-		<tr>
-		<td class = "tablehead">Price</td>
-		<td class = "tablehead">Buy Now</td>
-		</tr>
-	</thead>
-				
-	<tbody>
-		<tr>
-		<td class = "tablebody">$299.99</td>
-		<td class = "tablebody"><button onclick="BFunction()" class="ATCButton">ADD TO CART</button>
-		</td>
-	<tr>
-</tbody>
-</table>
-   <script>
+  <table>
+    <thead>
+      <tr>
+        <td class="tablehead">Price</td>
+        <td class="tablehead">Buy Now</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tablebody">$299.99</td>
+        <td class="tablebody">
+          <button onclick="addToCart()" class="ATCButton">ADD TO CART</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
     function addToCart() {
       // Store product details in localStorage
       const product = {
