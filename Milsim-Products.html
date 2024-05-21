@@ -127,14 +127,25 @@
 		<tr>
 	    <td class = "tablebody">$159.99</td>
 	    <td class = "tablebody"><button onclick="BFunction()" class="ATCButton">ADD TO CART</button></td>
-		<script>
-function BFunction() {
-  alert("Added to Cart!");2
-}
-</script>
-<tr>
+	<tr>
 </tbody>
 </table>
+	<script>
+    function addToCart1() {
+      // Store product details in localStorage
+      const product1 = {
+        imageSrc: 'https://agilitegear.com/cdn/shop/files/amap-3-assault-pack-multicam-on-K19.webp?v=1712656793&width=600',
+        price: '$159.99',
+        quantity: 1
+      };
+      localStorage.setItem('cartProduct', JSON.stringify(product));
+      alert('Added to Cart!');
+      // Redirect to Checkout.html after a short delay
+      setTimeout(function() {
+        window.location.href = 'Checkout.html';
+      }, 100);
+    }
+  </script>
 
 
 <br>
