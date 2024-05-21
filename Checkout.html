@@ -4,10 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	
 	<title>TacGEarPH - Checkout</title>
 	<link rel="stylesheet" href="Milsim.css">
+
+ <style>
+    .cart-container {
+      background-color: #F7D8C6;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    #cartDetails img {
+      max-width: 100%;
+      height: auto;
+    }
+    .product-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+  </style>
 </head>
 	
 <header>
@@ -32,9 +48,12 @@
 		<br>
 		<br>
 	<h1>Checkout</h1>
-  <div id="cartDetails"></div>
-
- <script>
+  <div class="cart-container">
+    <div id="cartDetails"></div>
+    <div id="totalPrice"></div>
+  </div>
+  
+  <script>
     // Retrieve product details from localStorage
     let product = JSON.parse(localStorage.getItem('cartProduct'));
 
@@ -42,14 +61,28 @@
       if (product) {
         const cartDetailsDiv = document.getElementById('cartDetails');
         cartDetailsDiv.innerHTML = `
-          <img src="${product.imageSrc}" width="490px" height="490px">
-          <p>Price: ${product.price}</p>
-          <p>Quantity: <button onclick="decreaseQuantity()">-</button> 
-          ${product.quantity} <button onclick="increaseQuantity()">+</button></p>
-          <button onclick="removeFromCart()">Remove Item</button>
+          <div class="product-info">
+            <img src="${product.imageSrc}" width="490px" height="490px">
+            <div>
+              <p>Price: ${product.price}</p>
+              <p>Quantity: <button onclick="decreaseQuantity()">-</button> 
+              ${product.quantity} <button onclick="increaseQuantity()">+</button></p>
+              <button onclick="removeFromCart()">Remove Item</button>
+            </div>
+          </div>
         `;
+        updateTotalPrice();
       } else {
         document.getElementById('cartDetails').innerHTML = '<p>No products in cart.</p>';
+        document.getElementById('totalPrice').innerHTML = '';
+      }
+    }
+
+    function updateTotalPrice() {
+      if (product) {
+        const price = parseFloat(product.price.replace('$', ''));
+        const total = price * product.quantity;
+        document.getElementById('totalPrice').innerHTML = `<p>Total Price: $${total.toFixed(2)}</p>`;
       }
     }
 
