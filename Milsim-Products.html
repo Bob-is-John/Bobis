@@ -72,7 +72,7 @@
 	<tr>
 </tbody>
 </table>
-  <script>
+   <script>
     function addToCart() {
       // Store product details in localStorage
       const product = {
@@ -81,8 +81,10 @@
       };
       localStorage.setItem('cartProduct', JSON.stringify(product));
       alert('Added to Cart!');
-      // Redirect to Checkout.html
-      window.location.href = 'Checkout.html';
+      // Redirect to Checkout.html after a short delay
+      setTimeout(function() {
+        window.location.href = 'Checkout.html';
+      }, 100);
     }
   </script>
 <br>
