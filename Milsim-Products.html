@@ -25,127 +25,124 @@
 </nav>
 	<br>
 	<center>
-<h1> PRODUCTS</h1>	
-<br>
-<hr>
-<h2><b> TacGear PLATE CARRIER </b></h2>
-<hr>
-<table>
-	<thead>
-	<tr>
-	<td class = "tablehead">Product</td>
-	<td class = "tablehead">Description</td>
-</tr>
-</thead>
+ <h1>PRODUCTS</h1>
+    <br>
+    <hr>
+    <h2><b>TacGear PLATE CARRIER</b></h2>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td class="tablehead">Product</td>
+                <td class="tablehead">Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tablebody">
+                    <img src="https://agilitegear.com/cdn/shop/products/Untitleddesign_7.jpg?v=1706689073&width=1000" width="490px" height="490px">
+                </td>
+                <td class="tablebody">
+                    - AGILITE K-19 PLATE CARRIER -
+                    <br><br>THE LATEST IN BALLISTICS PROTECTION
+                    <br>TECHNOLOGY ENGINEERED WITH USER
+                    <br>PROTECTION IN MIND. DESIGNED WITH
+                    <br>ERGONOMICS, AND EFFICIENCY.
+                    <br><br>SIMPLE, LIGHTWEIGHT, DURABLE, AND
+                    <br>AFFORDABLE. THE PLATE CARRIER GUARANTEED
+                    <br>TO PROTECT THE USER AT ANY SITUATION,
+                    <br>AND CONDITION, ALL WHILE BEING COMFORTABLE.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <td class="tablehead">Price</td>
+                <td class="tablehead">Buy Now</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tablebody">$299.99</td>
+                <td class="tablebody">
+                    <button onclick="addToCart()" class="ATCButton">ADD TO CART</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <hr>
+    <h2><b>TacGear ASSAULT PACK by Agilite</b></h2>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td class="tablehead">Product</td>
+                <td class="tablehead">Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tablebody">
+                    <img src="https://agilitegear.com/cdn/shop/files/amap-3-assault-pack-multicam-on-K19.webp?v=1712656793&width=600" width="490px" height="490px">
+                </td>
+                <td class="tablebody">
+                    - AGILITE ASSAULT PACK AMAP III -
+                    <br><br>A DURABLE AND RUGGED BATTLE PACK
+                    <br>READY TO TAKE ON ANY CHALLENGE.
+                    <br><br>DURABLE, HEAVY DUTY,
+                    <br>AFFORDABLE. THE PACK GUARANTEED
+                    <br>TO PROTECT THE USER AT ANY SITUATION,
+                    <br>AND CONDITION.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <td class="tablehead">Price</td>
+                <td class="tablehead">Buy Now</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tablebody">$159.99</td>
+                <td class="tablebody">
+                    <button onclick="addToCart1()" class="ATCButton01">ADD TO CART</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function addToCart() {
+            const product = {
+                imageSrc: 'https://agilitegear.com/cdn/shop/products/Untitleddesign_7.jpg?v=1706689073&width=1000',
+                price: '$299.99',
+                quantity: 1
+            };
+            localStorage.setItem('cartProduct', JSON.stringify(product));
+            alert('Added to Cart!');
+            setTimeout(function() {
+                window.location.href = 'Checkout.html';
+            }, 100);
+        }
 
-<tbody>
-	<tr>
-	<td class = "tablebody"><img src = "https://agilitegear.com/cdn/shop/products/Untitleddesign_7.
-	jpg?v=1706689073&width=1000" width = 490px height = 490px ></img></td>
-	<td class = "tablebody"> - AGILITE K-19 PLATE CARRIER - 
-	<br>
-	<br>THE LATEST IN BALLISTICS PROTECTION 		
-	<br>TECHNOLOGY ENGINEERED WITH USER 
-	<br>PROTECTION IN MIND. DESIGNED WITH 
-	<br>ERGONOMICS, AND EFFICIENCY.
-	<br>
-	<br>SIMPLE, LIGHTWEIGHT, DURABLE, AND  
-	<br>AFFORDABLE. THE PLATE CARRIER GUARANTEED   
-	<br>TO PROTECT THE USER AT ANY SITUATUION, 
-	<br>AND CONDITION, ALL WHILE BEING COMFORTABLE.</td>
-	<tr>
-	</tbody>
-		
-  <table>
-    <thead>
-      <tr>
-        <td class="tablehead">Price</td>
-        <td class="tablehead">Buy Now</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="tablebody">$299.99</td>
-        <td class="tablebody">
-          <button onclick="addToCart()" class="ATCButton">ADD TO CART</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <script>
-    function addToCart() {
-      // Store product details in localStorage
-      const product = {
-        imageSrc: 'https://agilitegear.com/cdn/shop/products/Untitleddesign_7.jpg?v=1706689073&width=1000',
-        price: '$299.99',
-        quantity: 1
-      };
-      localStorage.setItem('cartProduct', JSON.stringify(product));
-      alert('Added to Cart!');
-      // Redirect to Checkout.html after a short delay
-      setTimeout(function() {
-        window.location.href = 'Checkout.html';
-      }, 100);
-    }
-  </script>
-<br>
-<br>
-<hr>
-<table>
-	<h2><b>TacGear ASSAULT PACK by Agilite</b></h2>
-	<hr>
-	<thead>
-		<tr>
-		<td class = "tablehead">Product</td>
-		<td class = "tablehead">Description</td>
-		</tr>
-	</thead>	
-	<tbody>
-		<tr>
-		<td class = "tablebody"><img src = "https://agilitegear.com/cdn/shop/files/amap-3-assault-pack-multicam-on-K19.webp?v=1712656793&width=600" width = 490px height = 490px ></img></td>
-		<td class = "tablebody"> -AGILITE ASSAULT PACK AMAP III 
-		<br>
-		
-		<br>A DURABLE AND RAGGED BATTLE PACK
-		<br>READY TO TAKE ON ANY CHALLENGE.
-		<br>
-		<br>DURABLE, HEAVY DUTY, 
-		<br>AFFORDABLE. THE PLATE CARRIER GUARANTEED   
-		<br>TO PROTECT THE USER AT ANY SITUATUION, 
-		<br>AND CONDITION.</td>
-		<tr>
-	</tbody>			
-<table>
-	<thead>
-		<tr>
-		<td class = "tablehead">Price</td>
-		<td class = "tablehead">Buy Now</td>
-		</tr>
-	</thead>
-<tbody>
-		<tr>
-	    <td class = "tablebody">$159.99</td>
-	    <td class = "tablebody"><button onclick="addToCart1()" class="ATCButton01">ADD TO CART</button></td>
-	<tr>
-</tbody>
-</table>
-	<script>
-    function addToCart1() {
-      // Store product details in localStorage
-      const product1 = {
-        imageSrc: 'https://agilitegear.com/cdn/shop/files/amap-3-assault-pack-multicam-on-K19.webp?v=1712656793&width=600',
-        price: '$159.99',
-        quantity: 1
-      };
-      localStorage.setItem('cartProduct1', JSON.stringify(product));
-      alert('Added to Cart!');
-      // Redirect to Checkout.html after a short delay
-      setTimeout(function() {
-        window.location.href = 'Checkout.html';
-      }, 100);
-    }
-  </script>
+        function addToCart1() {
+            const product1 = {
+                imageSrc: 'https://agilitegear.com/cdn/shop/files/amap-3-assault-pack-multicam-on-K19.webp?v=1712656793&width=600',
+                price: '$159.99',
+                quantity: 1
+            };
+            localStorage.setItem('cartProduct1', JSON.stringify(product1));
+            alert('Added to Cart!');
+            setTimeout(function() {
+                window.location.href = 'Checkout.html';
+            }, 100);
+        }
+    </script>
 
 
 <br>
