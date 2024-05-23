@@ -42,154 +42,122 @@
 			<li><a href="">CONTACT US</a></li>
 		</ul>
 	</nav>
-	<center>
-	<h1> YOUR CART </h1>
-		<br>
-		<br>
-	<h1>Checkout</h1>
-  <div class="cart-container">
-    <div id="cartDetails"></div>
-    <div id="totalPrice"></div>
-  </div>
-  
-  <script>
-    // Retrieve product details from localStorage
-    let product = JSON.parse(localStorage.getItem('cartProduct'));
 
-    function updateCartDetails() {
-      if (product) {
-        const cartDetailsDiv = document.getElementById('cartDetails');
-        cartDetailsDiv.innerHTML = `
-          <div class="product-info">
-            <img src="${product.imageSrc}" width="490px" height="490px">
-            <div>
-              <p>Price: ${product.price}</p>
-              <p>Quantity: <button onclick="decreaseQuantity()">-</button> 
-              ${product.quantity} <button onclick="increaseQuantity()">+</button></p>
-              <button onclick="removeFromCart()">Remove Item</button>
-            </div>
-          </div>
-        `;
-        updateTotalPrice();
-      } else {
-        document.getElementById('cartDetails').innerHTML = '<p>No products in cart.</p>';
-        document.getElementById('totalPrice').innerHTML = '';
-      }
-    }
+	  
+<center>
+        <h1>YOUR CART</h1>
+        <br>
+	<br>
+        <h1>Checkout</h1>
+    </center>
+    <div class="cart-container">
+        <div id="cartDetails"></div>
+        <div id="totalPrice"></div>
+    </div>
+    <div class="cart-container">
+        <div id="cartDetails1"></div>
+        <div id="totalPrice1"></div>
+    </div>
+    <script>
+        let product = JSON.parse(localStorage.getItem('cartProduct'));
+        let product1 = JSON.parse(localStorage.getItem('cartProduct1'));
 
-    function updateTotalPrice() {
-      if (product) {
-        const price = parseFloat(product.price.replace('$', ''));
-        const total = price * product.quantity;
-        document.getElementById('totalPrice').innerHTML = `<p>Total Price: $${total.toFixed(2)}</p>`;
-      }
-    }
+        function updateCartDetails() {
+            if (product) {
+                const cartDetailsDiv = document.getElementById('cartDetails');
+                cartDetailsDiv.innerHTML = `
+                    <div class="product-info">
+                        <img src="${product.imageSrc}" width="490px" height="490px">
+                        <div>
+                            <p>Price: ${product.price}</p>
+                            <p>Quantity: <button onclick="decreaseQuantity()">-</button> 
+                            ${product.quantity} <button onclick="increaseQuantity()">+</button></p>
+                            <button onclick="removeFromCart()">Remove Item</button>
+                        </div>
+                    </div>
+                `;
+                updateTotalPrice();
+            } else {
+                document.getElementById('cartDetails').innerHTML = '<p>No products in cart.</p>';
+                document.getElementById('totalPrice').innerHTML = '';
+            }
 
-    function increaseQuantity() {
-      product.quantity++;
-      localStorage.setItem('cartProduct', JSON.stringify(product));
-      updateCartDetails();
-    }
+            if (product1) {
+                const cartDetailsDiv1 = document.getElementById('cartDetails1');
+                cartDetailsDiv1.innerHTML = `
+                    <div class="product-info">
+                        <img src="${product1.imageSrc}" width="490px" height="490px">
+                        <div>
+                            <p>Price: ${product1.price}</p>
+                            <p>Quantity: <button onclick="decreaseQuantity1()">-</button> 
+                            ${product1.quantity} <button onclick="increaseQuantity1()">+</button></p>
+                            <button onclick="removeFromCart1()">Remove Item</button>
+                        </div>
+                    </div>
+                `;
+                updateTotalPrice1();
+            } else {
+                document.getElementById('cartDetails1').innerHTML = '<p>No products in cart.</p>';
+                document.getElementById('totalPrice1').innerHTML = '';
+            }
+        }
 
-    function decreaseQuantity() {
-      if (product.quantity > 1) {
-        product.quantity--;
-        localStorage.setItem('cartProduct', JSON.stringify(product));
-        updateCartDetails();
-      }
-    }
+        function updateTotalPrice() {
+            if (product) {
+                const price = parseFloat(product.price.replace('$', ''));
+                const total = price * product.quantity;
+                document.getElementById('totalPrice').innerHTML = `<p>Total Price: $${total.toFixed(2)}</p>`;
+            }
+        }
 
-    function removeFromCart() {
-      localStorage.removeItem('cartProduct');
-      updateCartDetails();
-    }
+        function updateTotalPrice1() {
+            if (product1) {
+                const price = parseFloat(product1.price.replace('$', ''));
+                const total = price * product1.quantity;
+                document.getElementById('totalPrice1').innerHTML = `<p>Total Price: $${total.toFixed(2)}</p>`;
+            }
+        }
 
-    if (product) {
-      // Ensure quantity is set
-      if (!product.quantity) {
-        product.quantity = 1;
-        localStorage.setItem('cartProduct', JSON.stringify(product));
-      }
-      updateCartDetails();
-    } else {
-      document.getElementById('cartDetails').innerHTML = '<p>No products in cart.</p>';
-    }
-  </script>
+        function increaseQuantity() {
+            product.quantity++;
+            localStorage.setItem('cartProduct', JSON.stringify(product));
+            updateCartDetails();
+        }
 
+        function decreaseQuantity() {
+            if (product.quantity > 1) {
+                product.quantity--;
+                localStorage.setItem('cartProduct', JSON.stringify(product));
+                updateCartDetails();
+            }
+        }
 
+        function removeFromCart() {
+            localStorage.removeItem('cartProduct');
+            updateCartDetails();
+        }
 
+        function increaseQuantity1() {
+            product1.quantity++;
+            localStorage.setItem('cartProduct1', JSON.stringify(product1));
+            updateCartDetails();
+        }
 
-		
+        function decreaseQuantity1() {
+            if (product1.quantity > 1) {
+                product1.quantity--;
+                localStorage.setItem('cartProduct1', JSON.stringify(product1));
+                updateCartDetails();
+            }
+        }
 
+        function removeFromCart1() {
+            localStorage.removeItem('cartProduct1');
+            updateCartDetails();
+        }
 
-<div class="cart-container">
-    <div id="cartDetails1"></div>
-    <div id="totalPrice1"></div>
-  </div>
-  
-  <script>
-    // Retrieve product details from localStorage
-    let product1 = JSON.parse(localStorage.getItem('cartProduct1'));
-
-    function updateCartDetails() {
-      if (product1) {
-        const cartDetailsDiv = document.getElementById('cartDetails1');
-        cartDetailsDiv.innerHTML = `
-          <div class="product-info">
-            <img src="${product1.imageSrc}" width="490px" height="490px">
-            <div>
-              <p>Price: ${product1.price}</p>
-              <p>Quantity: <button onclick="decreaseQuantity()">-</button> 
-              ${product.quantity} <button onclick="increaseQuantity()">+</button></p>
-              <button onclick="removeFromCart()">Remove Item</button>
-            </div>
-          </div>
-        `;
-        updateTotalPrice();
-      } else {
-        document.getElementById('cartDetails1').innerHTML = '<p>No products in cart.</p>';
-        document.getElementById('totalPrice1').innerHTML = '';
-      }
-    }
-
-    function updateTotalPrice() {
-      if (product1) {
-        const price = parseFloat(product1.price.replace('$', ''));
-        const total = price * product.quantity;
-        document.getElementById('totalPrice1').innerHTML = `<p>Total Price: $${total.toFixed(2)}</p>`;
-      }
-    }
-
-    function increaseQuantity() {
-      product1.quantity++;
-      localStorage.setItem('cartProduct1', JSON.stringify(product));
-      updateCartDetails();
-    }
-
-    function decreaseQuantity() {
-      if (product1.quantity > 1) {
-        product1.quantity--;
-        localStorage.setItem('cartProduct1', JSON.stringify(product));
-        updateCartDetails();
-      }
-    }
-
-    function removeFromCart() {
-      localStorage.removeItem('cartProduct1');
-      updateCartDetails();
-    }
-
-    if (product1) {
-      // Ensure quantity is set
-      if (!product.quantity) {
-        product1.quantity = 1;
-        localStorage.setItem('cartProduct1', JSON.stringify(product));
-      }
-      updateCartDetails();
-    } else {
-      document.getElementById('cartDetails1').innerHTML = '<p>No products in cart.</p>';
-    }
-  </script>
+        document.addEventListener('DOMContentLoaded', updateCartDetails);
+    </script>
 
 </body>
 </html>
