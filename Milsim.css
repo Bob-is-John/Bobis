@@ -97,30 +97,46 @@ button
 	cursor: pointer;
 }
 
-.ATCButton {
+.ATCButton, .ATCButton01 {
     background-color: #756d54;
     cursor: pointer;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.ATCButton01 {
-    background-color: #756d54;
-    cursor: pointer;
+.ATCButton:hover, .ATCButton01:hover {
+    background-color: #5a5441;
 }
 
-.ATCButton02 {
-    background-color: #756d54;
-    cursor: pointer;
+.cart-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
 
-.ATCButton03 {
-    background-color: #756d54;
-    cursor: pointer;
+.product-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.ATCButton04 {
-    background-color: #756d54;
-    cursor: pointer;
+.product-info img {
+    max-width: 200px;
+    height: auto;
 }
+
+.product-info div {
+    max-width: 400px;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
 
 td 
 {
