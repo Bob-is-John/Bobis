@@ -94,7 +94,7 @@ button
 .button:hover
 {
 	background-color: hsla(0, 0%, 0%, 1);
-	cursor: crosshair;
+	cursor: pointer;
 }
 
 .ATCButton {
@@ -102,6 +102,25 @@ button
     cursor: pointer;
 }
 
+.ATCButton01 {
+    background-color: #756d54;
+    cursor: pointer;
+}
+
+.ATCButton02 {
+    background-color: #756d54;
+    cursor: pointer;
+}
+
+.ATCButton03 {
+    background-color: #756d54;
+    cursor: pointer;
+}
+
+.ATCButton04 {
+    background-color: #756d54;
+    cursor: pointer;
+}
 
 td 
 {
