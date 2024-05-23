@@ -97,6 +97,13 @@ button
 	cursor: pointer;
 }
 
+
+.product-image {
+    width: 490px;
+    height: 490px;
+    object-fit: cover;
+}
+
 .ATCButton, .ATCButton01 {
     background-color: #756d54;
     cursor: pointer;
